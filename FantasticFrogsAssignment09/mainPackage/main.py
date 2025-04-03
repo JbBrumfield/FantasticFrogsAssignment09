@@ -49,3 +49,6 @@ def main():
         print(f"The manufacturer of this product is: {manufacturer_name}")
     else:
         print(f"Manufacturer with ID {manufacturer_id} not found.")
+
+if __name__ == "__main__":
+    main()
