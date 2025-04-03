@@ -48,7 +48,14 @@ def main():
     if manufacturer_name:
         print(f"The manufacturer of this product is: {manufacturer_name}")
     else:
-        print(f"Manufacturer with ID {manufacturer_id} not found.")
+        print(f"Manufacturer with ID {manufacturer_id} not found.") 
+
+    brand_name = dbm.fetch_brand_name(brand_id, conn)
+ 
+    if brand_name:
+        print(f"The brand of this product is: {brand_name}")
+    else:
+        print(f"Brand with ID {brand_id} not found.")
 
 if __name__ == "__main__":
     main()
