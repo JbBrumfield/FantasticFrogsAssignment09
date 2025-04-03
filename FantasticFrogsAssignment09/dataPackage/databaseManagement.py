@@ -61,3 +61,17 @@ class databaseManagement:
             return results[0][0]  
         else:
             return None
+    
+    def fetch_brand_name(self, brand_id, conn):
+        """
+        Fetches the brand's name by BrandID.
+        @param brand_id: The BrandID to look up.
+        @param conn: The connection object.
+        @return: Brand name or None if not found.
+        """
+        sql = f"SELECT Brand FROM tBrand WHERE BrandID = {brand_id}"
+        results = self.submit_sql_to_server(sql, conn)
+        if results and len(results) > 0:
+            return results[0][0]  
+        else:
+            return None
